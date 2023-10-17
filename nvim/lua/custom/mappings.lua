@@ -9,7 +9,19 @@ M.dap = {
     ["<leader>dr"] = {
       "<cmd> DapContinue <CR>",
       "Start or continue debugger",
-    }
+    },
+    ["<leader>cg"] = {
+      "<cmd> CMakeGenerate <CR>",
+      "Generate CMake Project",
+    },
+    ["<leader>cb"] = {
+      "<cmd> CMakeBuild <CR>",
+      "Build CMake Project",
+    },
+    ["<leader>ct"] = {
+      "<cmd> CMakeTest --verbose <CR>",
+      "Test CMake Project",
+    },
   }
 }
 return M
