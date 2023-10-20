@@ -10,6 +10,12 @@ M.dap = {
       "<cmd> DapContinue <CR>",
       "Start or continue debugger",
     },
+    }
+}
+
+M.custom = {
+  plugin = true,
+  n = {
     ["<leader>cg"] = {
       "<cmd> CMakeGenerate <CR>",
       "Generate CMake Project",
