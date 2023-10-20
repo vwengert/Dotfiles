@@ -22,6 +22,10 @@ M.dap = {
       "<cmd> CMakeTest --verbose <CR>",
       "Test CMake Project",
     },
+    ["<leader>cq"] = {
+      "<cmd> CMakeClose <CR>",
+      "Close CMake Window",
+    },
   }
 }
 return M
