@@ -1,5 +1,16 @@
 local plugins = {
   {
+    "machakann/vim-highlightedyank",
+    lazy = false,
+  },
+  {
+    "RRethy/vim-illuminate",
+    lazy = false,
+    config = function()
+      require('illuminate').configure({})
+    end
+  },
+  {
     "tomasky/bookmarks.nvim",
     event = "VeryLazy",
     config = function()
@@ -21,9 +32,10 @@ local plugins = {
           map("n","mn",bm.bookmark_next) -- jump to next mark in local buffer
           map("n","mp",bm.bookmark_prev) -- jump to previous mark in local buffer
           map("n","ml",bm.bookmark_list) -- show marked file list in quickfix windows
-          end})
-      end
-    },
+        end
+      })
+    end
+  },
   {
     "iamcco/markdown-preview.nvim",
     cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
