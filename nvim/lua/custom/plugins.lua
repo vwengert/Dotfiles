@@ -3,6 +3,9 @@ local plugins = {
     "eriks47/generate.nvim",
     event = "VeryLazy",
     dependencies = { 'nvim-treesitter/nvim-treesitter' },
+    config = function()
+      require("core.utils").load_mappings("coding")
+    end,
   },
   {
     "machakann/vim-highlightedyank",
@@ -53,6 +56,7 @@ local plugins = {
     "cdelledonne/vim-cmake",
     event = "VeryLazy",
     config = function()
+      require("core.utils").load_mappings("cmake")
       vim.g.cmake_link_compile_commands=1
     end
   },
@@ -107,6 +111,7 @@ local plugins = {
     config = function()
       require "plugins.configs.lspconfig"
       require "custom.configs.lspconfig"
+      require("core.utils").load_mappings("coding")
     end,
   },
   {

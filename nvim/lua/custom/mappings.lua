@@ -1,4 +1,5 @@
 local M = {}
+
 M.dap = {
   plugin = true,
   n = {
@@ -10,25 +11,45 @@ M.dap = {
       "<cmd> DapContinue <CR>",
       "Start or continue debugger",
     },
-    ["<leader>cg"] = {
+  }
+}
+
+M.cmake = {
+  plugin = true,
+  n = {
+    ["<leader>mg"] = {
       "<cmd> CMakeGenerate <CR>",
       "Generate CMake Project",
     },
-    ["<leader>cb"] = {
+    ["<leader>mb"] = {
       "<cmd> CMakeBuild <CR>",
       "Build CMake Project",
     },
-    ["<leader>ct"] = {
+    ["<leader>mt"] = {
       "<cmd> CMakeTest --verbose <CR>",
       "Test CMake Project",
     },
-    ["<leader>cq"] = {
+    ["<leader>mq"] = {
       "<cmd> CMakeClose <CR>",
       "Close CMake Window",
     },
-    ["<leader>cc"] = {
+  },
+}
+
+M.coding = {
+  plugin = true,
+  n = {
+    ["<F4>"] = {
       "<cmd> ClangdSwitchSourceHeader <CR>",
       "Switch Source/Header",
+    },
+    ["<leader>ci"] = {
+      "<cmd> Generate implementations <CR>",
+      "Generate implementations",
+    },
+    ["<leader>cd"] = {
+      "<cmd> Generate declarations <CR>",
+      "Generate declarations",
     },
   }
 }

@@ -44,7 +44,7 @@ M.general = {
 
     -- new buffer
     ["<leader>b"] = { "<cmd> enew <CR>", "New buffer" },
-    ["<leader>ch"] = { "<cmd> NvCheatsheet <CR>", "Mapping cheatsheet" },
+    ["<leader>tc"] = { "<cmd> NvCheatsheet <CR>", "Mapping cheatsheet" },
 
     ["<leader>lf"] = {
       function()
@@ -73,7 +73,7 @@ M.general = {
     ["p"] = { 'p:let @+=@0<CR>:let @"=@0<CR>', "Dont copy replaced text", opts = { silent = true } },
   },
 }
-
+--
 M.tabufline = {
   plugin = true,
 
@@ -285,11 +285,11 @@ M.telescope = {
     ["<leader>gs"] = { "<cmd> Telescope git_status <CR>", "Git status" },
 
     -- pick a hidden term
-    ["<leader>pt"] = { "<cmd> Telescope terms <CR>", "Pick hidden term" },
+    ["<leader>ft"] = { "<cmd> Telescope terms <CR>", "Pick hidden term" },
 
     -- theme switcher
+    ["<leader>fm"] = { "<cmd> Telescope marks <CR>", "telescope bookmarks" },
     ["<leader>tt"] = { "<cmd> Telescope themes <CR>", "Nvchad themes" },
-    ["<leader>ma"] = { "<cmd> Telescope marks <CR>", "telescope bookmarks" },
   },
 }
 
@@ -457,7 +457,7 @@ M.gitsigns = {
       "Blame line",
     },
 
-    ["<leader>td"] = {
+    ["<leader>gd"] = {
       function()
         require("gitsigns").toggle_deleted()
       end,
