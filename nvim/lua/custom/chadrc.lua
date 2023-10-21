@@ -2,7 +2,7 @@
 local M = {}
 M.plugins = "custom.plugins"
 M.ui = {
-  theme = 'dark_horizon',
+  theme = 'catppuccin',
   transparency = true,
   statusline = {
     theme = "vscode_colored",
