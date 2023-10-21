@@ -2,8 +2,8 @@
 local M = {}
 M.plugins = "custom.plugins"
 M.ui = {
-  theme = 'github_dark',
-  transparency = false,
+  theme = 'dark_horizon',
+  transparency = true,
   statusline = {
     theme = "vscode_colored",
     override = {
