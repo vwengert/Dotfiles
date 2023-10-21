@@ -1,5 +1,10 @@
 local plugins = {
   {
+    "eriks47/generate.nvim",
+    event = "VeryLazy",
+    dependencies = { 'nvim-treesitter/nvim-treesitter' },
+  },
+  {
     "machakann/vim-highlightedyank",
     lazy = false,
   },
