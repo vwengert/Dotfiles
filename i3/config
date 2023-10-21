@@ -62,8 +62,8 @@ bindsym $mod+shift+p move workspace to output right
 bindsym $mod+shift+o move workspace to output left
 
 # start a terminal
-bindsym $mod+Return workspace number $ws1 split vertical; exec i3-sensible-terminal
-bindsym $mod+Shift+Return workspace number $ws1 split horizontal; exec i3-sensible-terminal
+bindsym $mod+Shift+Return workspace number $ws1 split vertical; exec i3-sensible-terminal
+bindsym $mod+Return workspace number $ws1 split horizontal; exec i3-sensible-terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -77,10 +77,10 @@ bindsym $mod+d exec --no-startup-id dmenu_run
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+odiaeresis focus right
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -89,10 +89,10 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+odiaeresis move right
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -101,7 +101,8 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+h split h
+bindsym $mod+o split h
+
 
 # split in vertical orientation
 bindsym $mod+v split v
@@ -173,7 +174,7 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 bindsym $mod+c workspace number $ws3 exec code
 bindsym $mod+i workspace number $ws4 exec intellij
 bindsym $mod+b workspace number $ws3 exec qtcreator
-bindsym $mod+o workspace number $ws5 exec obsidian
+bindsym $mod+n workspace number $ws5 exec obsidian
 bindsym $mod+g workspace number $ws2 exec google-chrome-stable
 
 for_window [class="QtCreator"] move container to workspace $ws3
@@ -187,10 +188,10 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym odiaeresis resize grow width 10 px or 10 ppt
+        bindsym h resize shrink width 10 px or 10 ppt
+        bindsym j resize grow height 10 px or 10 ppt
+        bindsym k resize shrink height 10 px or 10 ppt
+        bindsym l resize grow width 10 px or 10 ppt
 
         # same bindings, but for the arrow keys
         bindsym Left resize shrink width 10 px or 10 ppt
