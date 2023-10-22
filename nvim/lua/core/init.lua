@@ -1,4 +1,5 @@
 local opt = vim.opt
+local wo = vim.wo
 local g = vim.g
 local config = require("core.utils").load_config()
 
@@ -7,7 +8,9 @@ g.nvchad_theme = config.ui.theme
 g.base46_cache = vim.fn.stdpath "data" .. "/nvchad/base46/"
 g.toggle_theme_icon = "   "
 g.transparency = config.ui.transparency
-vim.wo.relativenumber = true
+
+wo.relativenumber = true
+vim.api.nvim_set_option_value("colorcolumn", "80", {})
 vim.api.nvim_set_keymap('i', 'jk', '<ESC>', { noremap = true })
 
 -------------------------------------- options ------------------------------------------
