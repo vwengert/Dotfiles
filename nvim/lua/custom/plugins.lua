@@ -3,9 +3,6 @@ local plugins = {
     "eriks47/generate.nvim",
     event = "VeryLazy",
     dependencies = { 'nvim-treesitter/nvim-treesitter' },
-    config = function()
-      require("core.utils").load_mappings("coding")
-    end,
   },
   {
     "machakann/vim-highlightedyank",

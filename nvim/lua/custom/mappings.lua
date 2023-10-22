@@ -47,14 +47,6 @@ M.coding = {
       "<cmd> ClangdSwitchSourceHeader <CR>",
       "Switch Source/Header",
     },
-    ["<leader>ci"] = {
-      "<cmd> Generate implementations <CR>",
-      "Generate implementations",
-    },
-    ["<leader>cd"] = {
-      "<cmd> Generate declarations <CR>",
-      "Generate declarations",
-    },
   }
 }
 
