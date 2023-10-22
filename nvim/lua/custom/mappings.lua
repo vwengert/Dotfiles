@@ -50,4 +50,17 @@ M.coding = {
   }
 }
 
+M.git = {
+  plugin = true,
+  n = {
+    ["<leader>gl"] = {
+      "<cmd> LazyGit <CR>",
+      "open LazyGit",
+    },
+    ["<leader>gf"] = {
+      "<cmd> LazyGitFilterCurrentFile <CR>",
+      "open Git Current File",
+    },
+  }
+}
 return M

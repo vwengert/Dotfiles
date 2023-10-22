@@ -1,5 +1,17 @@
 local plugins = {
   {
+    "kdheepak/lazygit.nvim",
+    event = "VeryLazy",
+    dependencies = {
+      "nvim-telescope/telescope.nvim",
+      "nvim-lua/plenary.nvim",
+    },
+    config = function()
+      require("telescope").load_extension("lazygit")
+      require("core.utils").load_mappings("git")
+    end,
+  },
+  {
     "eriks47/generate.nvim",
     event = "VeryLazy",
     dependencies = { 'nvim-treesitter/nvim-treesitter' },
