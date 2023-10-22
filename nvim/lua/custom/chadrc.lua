@@ -6,7 +6,6 @@ M.ui = {
   transparency = true,
   statusline = {
     theme = "default",
-    separator_style = "round",
     override = {
       mode = function()
         return ""
