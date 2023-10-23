@@ -105,7 +105,9 @@ local plugins = {
   {
     "mfussenegger/nvim-dap",
     config = function(_, _)
+      require("custom.configs.dap")
       require("core.utils").load_mappings("dap")
+      require('dap.ext.vscode').load_launchjs( nil, { codelldb = {'c', 'cpp'}})
     end
   },
   {
