@@ -1,5 +1,9 @@
 local options = {
-  ensure_installed = { "lua" },
+  build = ":TSUpdate",
+  event = { "BufReadPre", "BufNewFile"},
+  ensure_installed = { "lua",
+    "cpp", "markdown", "markdown_inline",
+    "bash", "java", "python" },
 
   highlight = {
     enable = true,
@@ -7,6 +11,15 @@ local options = {
   },
 
   indent = { enable = true },
+  incremental_selection = {
+    enable = true,
+    keymaps = {
+      init_selection = "<C-space>",
+      node_incremental = "<C-space>",
+      scope_incremental = false,
+      node_decremental = "<bs>",
+    },
+  },
 }
 
 return options
