@@ -1,6 +1,21 @@
 {
   "version": "0.2.0",
   "configurations": [
+  {
+    "version": "0.2.0",
+    "configurations": [
+    {
+      "type": "cpp",
+      "request": "launch",
+      "name": "Attach to gdbserver :10000",
+      "MIMode": "gdb",
+      "miDebuggerServerAddress": "127.0.0.1:10000",
+      "miDebuggerPath": "/usr/bin/gdb",
+      "cwd": "~Sources/dir",
+      "program": "Debug/executable"
+    }
+    ]
+  }
     {
       "type": "codelldb",
       "request": "launch",
