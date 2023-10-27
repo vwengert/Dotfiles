@@ -60,7 +60,10 @@ M.git = {
     ["<leader>ga"] = {
       function()
         vim.api.nvim_command('let res = system("git blame ".expand("%"))')
-        vim.api.nvim_command('vnew')
+        vim.api.nvim_command('vnew blame')
+        vim.api.nvim_command('set buftype=nofile')
+        vim.api.nvim_command('set bufhidden=hide')
+        vim.api.nvim_command('set nobuflisted')
         vim.api.nvim_command('put=res')
       end,
       "Git blame File",
