@@ -57,6 +57,14 @@ M.git = {
       "<cmd> LazyGit <CR>",
       "open LazyGit",
     },
+    ["<leader>ga"] = {
+      function()
+        vim.api.nvim_command('let res = system("git blame ".expand("%"))')
+        vim.api.nvim_command('vnew')
+        vim.api.nvim_command('put=res')
+      end,
+      "Git blame File",
+    },
     ["<leader>gf"] = {
       "<cmd> LazyGitFilterCurrentFile <CR>",
       "open Git Current File",
