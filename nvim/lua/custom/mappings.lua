@@ -11,6 +11,10 @@ M.dap = {
       "<cmd> DapContinue <CR>",
       "Start or continue debugger",
     },
+    ["<leader>de"] = {
+      "<cmd>lua require('dapui').eval()<CR>",
+      "Evaluate expression",
+    }
   }
 }
 
