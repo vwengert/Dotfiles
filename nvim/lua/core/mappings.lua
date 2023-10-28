@@ -28,6 +28,7 @@ M.general = {
     ["<C-a>"] = { "<cmd> wa <CR>", "Save all file" },
 
     ["<leader>qq"] = { "<cmd> :qa! <CR>", "Leave without check" },
+    ["<leader>qb"] = { "<cmd> :q <CR>", "Close buffer saving" },
     ["<leader>qs"] = { "<cmd> :wqa! <CR>", "Leave with after saving all" },
 
     -- Copy all
