@@ -12,6 +12,7 @@ g.transparency = config.ui.transparency
 wo.relativenumber = true
 vim.api.nvim_set_option_value("colorcolumn", "80", {})
 vim.api.nvim_set_keymap('i', 'jk', '<ESC>', { noremap = true })
+vim.api.nvim_set_keymap('v', 'jk', '<ESC>', { noremap = true })
 
 -------------------------------------- options ------------------------------------------
 opt.laststatus = 3 -- global statusline
