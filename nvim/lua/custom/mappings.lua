@@ -22,7 +22,7 @@ M.cmake = {
   plugin = true,
   n = {
     ["<leader>mg"] = {
-      "<cmd> CMakeGenerate <CR>",
+      "<cmd> CMakeGenerate -DCMAKE_EXPORT_COMPILE_COMMANDS=1 <CR>",
       "Generate CMake Project",
     },
     ["<leader>mb"] = {
