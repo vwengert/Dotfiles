@@ -151,6 +151,7 @@ local plugins = {
         "clang-format",
         "codelldb",
         "cpptools",
+        "cppman",
       }
     }
   }

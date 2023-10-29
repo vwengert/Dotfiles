@@ -51,6 +51,18 @@ M.coding = {
       "<cmd> ClangdSwitchSourceHeader <CR>",
       "Switch Source/Header",
     },
+    ["<leader>ch"] = {
+      function()
+        vim.api.nvim_command('let res = system("cppman ".expand("<cword>"))')
+        vim.api.nvim_command('vnew cppman')
+        vim.api.nvim_command('set buftype=nofile')
+        vim.api.nvim_command('set bufhidden=hide')
+        vim.api.nvim_command('set nobuflisted')
+        vim.api.nvim_command('put=res')
+        vim.api.nvim_command('goto 1')
+      end,
+      "Help from cppman",
+    },
   }
 }
 
@@ -69,6 +81,7 @@ M.git = {
         vim.api.nvim_command('set bufhidden=hide')
         vim.api.nvim_command('set nobuflisted')
         vim.api.nvim_command('put=res')
+        vim.api.nvim_command('goto 1')
       end,
       "Git blame File",
     },
