@@ -1,5 +1,11 @@
 local plugins = {
   {
+    "nvim-treesitter/nvim-treesitter-textobjects",
+    event = "VeryLazy",
+    after = "nvim-treesitter",
+    requires = "nvim-treesitter/nvim-treesitter",
+  },
+  {
     "ThePrimeagen/refactoring.nvim",
     event = "VeryLazy",
     dependencies = {
