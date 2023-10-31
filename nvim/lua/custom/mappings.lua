@@ -53,13 +53,7 @@ M.coding = {
     },
     ["<leader>ch"] = {
       function()
-        vim.api.nvim_command('let res = system("cppman ".expand("<cword>"))')
-        vim.api.nvim_command('vnew cppman')
-        vim.api.nvim_command('set buftype=nofile')
-        vim.api.nvim_command('set bufhidden=hide')
-        vim.api.nvim_command('set nobuflisted')
-        vim.api.nvim_command('put=res')
-        vim.api.nvim_command('goto 1')
+        vim.api.nvim_command('vertical term cppman <cword>')
       end,
       "Help from cppman",
     },
