@@ -12,7 +12,7 @@ g.transparency = config.ui.transparency
 wo.relativenumber = true
 vim.api.nvim_set_option_value("colorcolumn", "80", {})
 vim.api.nvim_set_keymap('i', 'jk', '<ESC>', { noremap = true })
-vim.api.nvim_set_keymap('v', 'jk', '<ESC>', { noremap = true })
+vim.api.nvim_set_keymap('v', 'kj', '<ESC>', { noremap = true })
 
 opt.foldmethod = "expr"
 opt.foldexpr = "nvim_treesitter#foldexpr()"
