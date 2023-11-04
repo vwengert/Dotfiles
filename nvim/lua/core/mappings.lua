@@ -24,8 +24,7 @@ M.general = {
     ["<C-k>"] = { "<C-w>k", "Window up" },
 
     -- save
-    ["<C-s>"] = { "<cmd> w <CR>", "Save file" },
-    ["<C-a>"] = { "<cmd> wa <CR>", "Save all file" },
+    ["<C-s>"] = { "<cmd> wa <CR>", "Save all file" },
 
     ["<leader>qq"] = { "<cmd> :qa! <CR>", "Leave without check" },
     ["<leader>qb"] = { "<cmd> :q <CR>", "Close buffer saving" },
