@@ -86,30 +86,5 @@ M.git = {
   }
 }
 
-M.refactoring = {
-  plugin = true,
-  n = {
-    ["<leader>rt"] = {
-      function()
-        require('telescope').extensions.refactoring.refactors()
-      end,
-      "Refactorings",
-    },
-  },
-  v = {
-    ["<leader>re"] = {
-      function()
-        require('refactoring').refactor('Extract Function')
-      end,
-      "Refactor to function",
-    },
-    ["<leader>rt"] = {
-      function()
-        require('telescope').extensions.refactoring.refactors()
-      end,
-      "Refactorings",
-    },
-  },
-}
 
 return M
