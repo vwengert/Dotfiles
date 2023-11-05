@@ -23,6 +23,9 @@ M.general = {
     ["<C-j>"] = { "<C-w>j", "Window down" },
     ["<C-k>"] = { "<C-w>k", "Window up" },
 
+    -- fix jump forward not working with NvChad
+    ["fj"] = { "<C-i>", opts = { noremap = true } },
+
     -- save
     ["<C-s>"] = { "<cmd> wa <CR>", "Save all file" },
 
