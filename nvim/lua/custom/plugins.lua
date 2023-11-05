@@ -1,5 +1,17 @@
 local plugins = {
   {
+    "tpope/vim-dadbod",
+    event = "VeryLazy",
+  },
+  {
+    "kristijanhusak/vim-dadbod-ui",
+    event = "VeryLazy",
+  },
+  {
+    "kristijanhusak/vim-dadbod-completion",
+    event = "VeryLazy",
+  },
+  {
     "nvim-treesitter/nvim-treesitter-textobjects",
     event = "VeryLazy",
     after = "nvim-treesitter",
