@@ -26,9 +26,8 @@ M.general = {
     -- save
     ["<C-s>"] = { "<cmd> wa <CR>", "Save all file" },
 
-    ["<leader>qq"] = { "<cmd> :qa! <CR>", "Leave without check" },
-    ["<leader>qb"] = { "<cmd> :q <CR>", "Close buffer saving" },
-    ["<leader>qs"] = { "<cmd> :wqa! <CR>", "Leave with after saving all" },
+    ["<leader>qq"] = { "<cmd> :qa <CR>", "Leave without check" },
+    ["<leader>qs"] = { "<cmd> :wqa <CR>", "Leave after saving all" },
 
     -- Copy all
     ["<C-c>"] = { "<cmd> %y+ <CR>", "Copy whole file" },
@@ -344,21 +343,6 @@ M.nvterm = {
         require("nvterm.terminal").toggle "vertical"
       end,
       "Toggle vertical term",
-    },
-
-    -- new
-    ["<leader>h"] = {
-      function()
-        require("nvterm.terminal").new "horizontal"
-      end,
-      "New horizontal term",
-    },
-
-    ["<leader>v"] = {
-      function()
-        require("nvterm.terminal").new "vertical"
-      end,
-      "New vertical term",
     },
   },
 }
