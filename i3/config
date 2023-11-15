@@ -36,7 +36,8 @@ bindsym $mod+g exec google-chrome-stable
 bindsym $mod+Shift+q kill
 
 # start program launcher
-bindsym $mod+d exec --no-startup-id dmenu_recency
+# bindsym $mod+d exec --no-startup-id dmenu_recency
+bindsym $mod+d exec --no-startup-id rofi -show drun
 
 # launch categorized menu
 bindsym $mod+z exec --no-startup-id morc_menu
@@ -152,7 +153,7 @@ set $ws4 4:Files
 set $ws5 5:Finances
 set $ws6 6
 set $ws7 7
-set $ws8 8
+set $ws8 8:Steam
 
 # use workspace on display
 workspace $ws1 output HDMI-0
@@ -161,7 +162,7 @@ workspace $ws3 output DP-0
 workspace $ws4 output DP-0
 workspace $ws5 output DP-0
 workspace $ws6 output DP-0
-workspace $ws7 output DP-0
+workspace $ws7 output HDMI-0
 workspace $ws8 output HDMI-0
 
 # switch to workspace
@@ -200,6 +201,7 @@ assign [class="Gnucash"] $ws5
 assign [class="Pcmanfm"] $ws4
 assign [class="URxvt"]  $ws1
 assign [class="Terminator"]  $ws1
+assign [class="steam"]  $ws8
 
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 1
