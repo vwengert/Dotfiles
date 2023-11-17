@@ -33,7 +33,19 @@ bindsym $mod+Return exec terminator
 bindsym $mod+g exec google-chrome-stable
 
 # kill focused window
-bindsym $mod+Shift+q kill
+#bindsym $mod+Shift+q kill
+# ask before close the window
+set $close "Close the window? (y/n)"
+
+mode $close {
+    bindsym y kill, mode default
+    bindsym Return kill, mode default
+
+    bindsym n mode default
+    bindsym Escape mode default
+}
+
+bindsym $mod+Shift+q mode $close
 
 # start program launcher
 # bindsym $mod+d exec --no-startup-id dmenu_recency
@@ -151,7 +163,7 @@ set $ws2 2:Web
 set $ws3 3:Development
 set $ws4 4:Files
 set $ws5 5:Finances
-set $ws6 6
+set $ws6 6:Games
 set $ws7 7
 set $ws8 8:Steam
 
@@ -291,7 +303,7 @@ bindsym $mod+9 exec --no-startup-id blurlock
 
 # Autostart applications
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec --no-startup-id nitrogen --restore; sleep 1; picom -b
+#exec --no-startup-id nitrogen --restore; sleep 1; picom -b
 #exec --no-startup-id manjaro-hello
 exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
