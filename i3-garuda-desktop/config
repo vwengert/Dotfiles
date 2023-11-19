@@ -30,7 +30,9 @@ set $preferredScreenCaptureTool /usr/bin/flameshot gui
 ###########################################
 
 bindsym $super+F1 exec $preferredBrowser;focus
+bindsym $super+g exec $preferredBrowser;focus
 bindsym $super+F2 exec $preferredFileManager;focus
+bindsym $super+c exec gnucash;focus
 
 ### Screen Capturing & Print Screen: ###
 
@@ -51,6 +53,7 @@ font pango: source code pro 10
 floating_modifier $super
 
 #autostart
+exec --no-startup-id autorandr --change
 exec --no-startup-id ~/.fehbg
 exec --no-startup-id xsettingsd &
 #exec --no-startup-id pasystray
@@ -71,7 +74,6 @@ exec_always --no-startup-id numlockx on
 exec blueberry-tray
 exec --no-startup-id java -Xmx1024m -jar "/opt/xdman/xdman.jar" -m
 exec --no-startup-id ~/.local/bin/fastfetch-garuda
-exec --no-startup-id autorandr --change
 exec --no-startup-id synology-drive
 exec_always --no-startup-id setxkbmap -option caps:escape
 
@@ -176,7 +178,7 @@ set $ws3 3:Develop
 set $ws4 4:Files
 set $ws5 5:Finances
 set $ws6 6:Games
-set $ws7 7
+set $ws7 7:Videos
 set $ws8 8:Steam
 
 # use workspace on display
@@ -186,7 +188,7 @@ workspace $ws3 output DP-0
 workspace $ws4 output HDMI-0
 workspace $ws5 output DP-0
 workspace $ws6 output DP-0
-workspace $ws7 output HDMI-0
+workspace $ws7 output DP-0
 workspace $ws8 output HDMI-0
 
 # switch to workspace
@@ -310,6 +312,7 @@ assign [class="Thunar"] $ws4
 assign [class="URxvt"]  $ws1
 assign [class="Terminator"]  $ws1
 assign [class="steam"]  $ws8
+assign [class="vlc"]  $ws7
 
 # window rules, you can find the window class using xprop
 for_window [class=".*"] border pixel 4
