@@ -21,7 +21,7 @@ general {
 order += "disk /"
 order += "wireless _first_"
 order += "ethernet _first_"
-#order += "battery all"
+order += "battery all"
 #order += "battery all"
 #order += "load"
 #order += "cpu_temperature 0"
@@ -54,13 +54,13 @@ format_down = " no lan "
 
 battery all {
 format = "<span color='#FEFF72'> %status: %percentage </span>"   // %remaining %emptytime"
-format_down = "No battery"
-#'#fa4c7e'
-        status_chr = "<span color='#00e64d'>[  ]  </span> "
-        status_bat = "<span color='#8080ff' >[   ] </span>"
-        status_unk = "[? ukwn ] "
-        status_full = "<span color='#66FF99'> [  ] </span>"
-        path = "/sys/class/power_supply/BAT%d/uevent"
+# format_down = "No battery"
+# #'#fa4c7e'
+#         status_chr = "<span color='#00e64d'>[  ]  </span> "
+#         status_bat = "<span color='#8080ff' >[   ] </span>"
+#         status_unk = "[? ukwn ] "
+#         status_full = "<span color='#66FF99'> [  ] </span>"
+#         path = "/sys/class/power_supply/BAT%d/uevent"
         low_threshold = 10
 #       last_full_capacity = true
         hide_seconds = true
