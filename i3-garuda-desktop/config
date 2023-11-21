@@ -74,7 +74,7 @@ exec_always --no-startup-id numlockx on
 exec blueberry-tray
 exec --no-startup-id java -Xmx1024m -jar "/opt/xdman/xdman.jar" -m
 exec --no-startup-id ~/.local/bin/fastfetch-garuda
-exec --no-startup-id synology-drive
+# exec --no-startup-id synology-drive
 exec_always --no-startup-id setxkbmap -option caps:escape
 
 # hide/unhide i3status bar
