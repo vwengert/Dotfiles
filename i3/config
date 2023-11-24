@@ -199,7 +199,6 @@ assign [class="Gnucash"] $ws5
 assign [class="Terminator"]  $ws1
 
 # Open specific applications in floating mode
-for_window [title="alsamixer"] floating enable border pixel 1
 for_window [class="Gnucash"] floating enable border pixel 1
 for_window [class="Lxappearance"] floating enable sticky enable border normal
 for_window [class="Pavucontrol"] floating enable
