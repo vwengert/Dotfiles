@@ -1,23 +1,5 @@
 local M = {}
 
-M.dap = {
-  plugin = true,
-  n = {
-    ["<leader>db"] = {
-      "<cmd> DapToggleBreakpoint <CR>",
-      "Toggle breakpoint at line",
-    },
-    ["<leader>dr"] = {
-      "<cmd> DapContinue <CR>",
-      "Start or continue debugger",
-    },
-    ["<leader>de"] = {
-      "<cmd>lua require('dapui').eval()<CR>",
-      "Evaluate expression",
-    }
-  }
-}
-
 M.cmake = {
   plugin = true,
   n = {
@@ -57,6 +39,14 @@ M.coding = {
       end,
       "Help from cppman",
     },
+    ["<leader>db"] = {
+      function()
+        vim.api.nvim_command('redir >> .breakpints')
+        vim.api.nvim_command('echo "break" join([expand("%"), line(".")], ":")')
+        vim.api.nvim_command('redir END')
+      end,
+      "set breakpoint in .breakpoints",
+    },
   }
 }
 
@@ -85,6 +75,5 @@ M.git = {
     },
   }
 }
-
 
 return M
