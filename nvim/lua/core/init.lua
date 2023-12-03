@@ -3,6 +3,14 @@ local wo = vim.wo
 local g = vim.g
 local config = require("core.utils").load_config()
 
+local notify = vim.notify
+vim.notify = function(msg, ...)
+  if msg:match("warning: multiple different client offset_encodings") then
+    return
+  end
+  notify(msg, ...)
+end
+
 -------------------------------------- globals -----------------------------------------
 g.nvchad_theme = config.ui.theme
 g.base46_cache = vim.fn.stdpath "data" .. "/nvchad/base46/"
