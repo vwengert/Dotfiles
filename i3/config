@@ -199,6 +199,7 @@ assign [class="dolphin"]  $ws4
 
 # Open specific applications in floating mode
 for_window [class="Gnucash"] floating enable border pixel 1
+for_window [class="LearnOpenGL"] floating enable border pixel 1
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
