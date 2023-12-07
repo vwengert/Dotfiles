@@ -1,5 +1,13 @@
 local plugins = {
   {
+    "cdelledonne/vim-cmake",
+    event = "VeryLazy",
+    config = function()
+      require("core.utils").load_mappings("cmake")
+      vim.g.cmake_link_compile_commands=1
+    end
+  },
+  {
     "nvim-treesitter/nvim-treesitter-textobjects",
     event = "VeryLazy",
     after = "nvim-treesitter",
