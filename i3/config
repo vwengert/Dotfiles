@@ -194,12 +194,14 @@ bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 # Open applications on specific workspaces
 assign [class="Google-chrome"] $ws2
 assign [class="Gnucash"] $ws5
+assign [class="jetbrains-clion"] $ws3
 assign [class="Terminator"]  $ws1
 assign [class="dolphin"]  $ws4
 
 # Open specific applications in floating mode
 for_window [class="Gnucash"] floating enable border pixel 1
 for_window [class="LearnOpenGL"] floating enable border pixel 1
+for_window [class="ModernCPP"] floating enable border pixel 1
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
