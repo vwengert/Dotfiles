@@ -69,7 +69,7 @@ exec_always --no-startup-id synology-drive
 # bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness down'"
 
 bindsym $mod+e exec dolphin
-bindsym $mod+c exec gnucash
+bindsym $mod+c exec qtcreator
 
 focus_follows_mouse no
 
@@ -143,7 +143,7 @@ bindsym $mod+Ctrl+Left workspace prev
 # something like: set $ws1 1:mail
 #                 set $ws2 2:
 set $ws1 1:Terminal
-set $ws2 2:Web
+set $ws2 2:
 set $ws3 3:Development
 set $ws4 4:Files
 set $ws5 5:Finances
@@ -194,6 +194,7 @@ bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 # Open applications on specific workspaces
 assign [class="Google-chrome"] $ws2
 assign [class="Gnucash"] $ws5
+assign [class="QtCreator"] $ws3
 assign [class="jetbrains-clion"] $ws3
 assign [class="Terminator"]  $ws1
 assign [class="dolphin"]  $ws4
