@@ -40,7 +40,7 @@ ipv6 {
 wireless _first_ {
 # format_up = "W: (%quality at %essid) %ip"
 # format_down = "W: down"
-format_up = "<span color='#FFFFFF'>[  ]: On: %essid (%quality) %ip</span>"
+format_up = "<span color='#FFFFFF'>[   ]: On: %essid (%quality) %ip</span>"
 format_down = "" #"[  ]  Wifi: down"
 }
 
