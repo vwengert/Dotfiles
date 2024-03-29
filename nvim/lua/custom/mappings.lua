@@ -3,6 +3,10 @@ local M = {}
 M.cmake = {
   plugin = true,
   n = {
+    ["<leader>mc"] = {
+      "<cmd> CMakeClean <CR>",
+      "Clean CMake Project",
+    },
     ["<leader>mg"] = {
       "<cmd> CMakeGenerate -G Ninja -DCMAKE_EXPORT_COMPILE_COMMANDS=1 <CR>",
       "Generate CMake Project",
@@ -16,8 +20,12 @@ M.cmake = {
       "Test CMake Project",
     },
     ["<leader>mq"] = {
-      "<cmd> CMakeClose <CR>",
-      "Close CMake Window",
+      "<cmd> CMakeToggle <CR>",
+      "Toggle CMake Window",
+    },
+    ["<leader>ms"] = {
+      "<cmd> CMakeStop <CR>",
+      "Stop CMake",
     },
   },
 }
