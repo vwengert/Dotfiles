@@ -75,6 +75,7 @@ return {
         "lua",
         "markdown",
         "markdown_inline",
+        "cpp",
         "cmake",
         "python",
         "query",
