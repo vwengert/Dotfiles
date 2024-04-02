@@ -81,6 +81,7 @@ return {
         "query",
         "regex",
         "vim",
+        "vimdoc",
         "yaml",
       },
     },
