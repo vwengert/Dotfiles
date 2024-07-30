@@ -19,3 +19,4 @@ map("n", "<leader>mb", "<cmd>wa<cr> <cmd> CMakeBuild <CR>", { desc = "Build CMak
 map("n", "<leader>mt", "<cmd> CMakeTest --verbose <CR>", { desc = "Test CMake Project" })
 map("n", "<leader>mq", "<cmd> CMakeToggle <CR>", { desc = "Toggle CMake Window" })
 map("n", "<leader>ms", "<cmd> CMakeStop <CR>", { desc = "Stop CMake" })
+map("i", "jk", "<Esc>", { desc = "Escape insert mode" })
