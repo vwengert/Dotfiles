@@ -5,6 +5,7 @@ local plugins = {
     config = function()
       require("core.utils").load_mappings("cmake")
       vim.g.cmake_link_compile_commands=1
+      vim.g.cmake_build_dir_location="build"
     end
   },
   {
@@ -45,7 +46,7 @@ local plugins = {
     end,
   },
   {
-    "jose-elias-alvarez/null-ls.nvim",
+    "nvimtools/none-ls.nvim",
     event = "VeryLazy",
     opts = function()
       return require "custom.configs.null-ls"

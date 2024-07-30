@@ -285,6 +285,9 @@ M.telescope = {
     ["<leader>fz"] = { "<cmd> Telescope current_buffer_fuzzy_find <CR>", "Find in current buffer" },
     ["<leader>fr"] = { "<cmd> Telescope resume <CR>", "Resume find files" },
     ["<leader>fl"] = { "<cmd> Telescope jumplist <CR>", "open jumplist" },
+    ["<leader>fq"] = { "<cmd> Telescope quickfix <CR>", "open quickfixlist" },
+    ["<leader>fQ"] = { "<cmd> Telescope quickfixhistory <CR>", "open quickfixhistory" },
+    ["<leader>fd"] = { "<cmd> Telescope loclist <CR>", "open diagnostic loclist" },
 
     -- git
     ["<leader>gc"] = { "<cmd> Telescope git_commits <CR>", "Git commits" },
