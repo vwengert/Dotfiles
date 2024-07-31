@@ -120,8 +120,6 @@ return {
       ensure_installed = {
         "clangd",
         "clang-format",
-        "cmakelang",
-        "cmakelint",
         "shfmt",
         "stylua",
         "shellcheck",
