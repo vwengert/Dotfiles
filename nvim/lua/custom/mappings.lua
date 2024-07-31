@@ -1,31 +1,12 @@
 local M = {}
 
 M.cmake = {
-  plugin = true,
   n = {
-    ["<leader>mc"] = {
-      "<cmd> CMakeClean <CR>",
-      "Clean CMake Project",
-    },
-    ["<leader>mg"] = {
-      "<cmd> CMakeGenerate -G Ninja -DCMAKE_EXPORT_COMPILE_COMMANDS=1 <CR>",
-      "Generate CMake Project",
-    },
-    ["<leader>mb"] = {
-      "<cmd> CMakeBuild <CR>",
-      "Build CMake Project",
-    },
-    ["<leader>mt"] = {
-      "<cmd> CMakeTest --verbose <CR>",
-      "Test CMake Project",
-    },
-    ["<leader>mq"] = {
-      "<cmd> CMakeToggle <CR>",
-      "Toggle CMake Window",
-    },
-    ["<leader>ms"] = {
-      "<cmd> CMakeStop <CR>",
-      "Stop CMake",
+    ["<leader>ma"] = {
+      function()
+        vim.api.nvim_command('horizontal term ./hmiBuild.sh -p mt')
+      end,
+      "make mt debug",
     },
   },
 }

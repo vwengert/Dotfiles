@@ -18,7 +18,7 @@ g.toggle_theme_icon = "   "
 g.transparency = config.ui.transparency
 
 wo.relativenumber = true
-vim.api.nvim_set_option_value("colorcolumn", "80", {})
+vim.api.nvim_set_option_value("colorcolumn", "150", {})
 vim.api.nvim_set_keymap('i', 'jk', '<ESC>', { noremap = true })
 vim.api.nvim_set_keymap('v', 'kj', '<ESC>', { noremap = true })
 
@@ -35,10 +35,10 @@ opt.cursorline = true
 
 -- Indenting
 opt.expandtab = true
-opt.shiftwidth = 2
+opt.shiftwidth = 4
 opt.smartindent = true
-opt.tabstop = 2
-opt.softtabstop = 2
+opt.tabstop = 4
+opt.softtabstop = 4
 
 opt.fillchars = { eob = " " }
 opt.ignorecase = true

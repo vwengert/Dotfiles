@@ -1,14 +1,5 @@
 local plugins = {
   {
-    "cdelledonne/vim-cmake",
-    event = "VeryLazy",
-    config = function()
-      require("core.utils").load_mappings("cmake")
-      vim.g.cmake_link_compile_commands=1
-      vim.g.cmake_build_dir_location="build"
-    end
-  },
-  {
     "nvim-treesitter/nvim-treesitter-textobjects",
     event = "VeryLazy",
     after = "nvim-treesitter",
@@ -77,7 +68,7 @@ local plugins = {
     "nvimtools/none-ls.nvim",
     event = "VeryLazy",
     opts = function()
-      return require "custom.configs.null-ls"
+      return require "custom.configs.none-ls"
     end,
   },
   {
@@ -92,7 +83,6 @@ local plugins = {
     "williamboman/mason.nvim",
     opts = {
       ensure_installed = {
-        "clangd",
         "clang-format",
         "cpptools",
         "lua-language-server",

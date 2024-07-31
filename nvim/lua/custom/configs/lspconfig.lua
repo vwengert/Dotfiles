@@ -10,4 +10,5 @@ lspconfig.clangd.setup {
     on_attach(client, bufnr)
   end,
   capabilities = capabilities,
+  cmd = { "clangd", "--background-index", "--clang-tidy", "-j=4" },
 }
