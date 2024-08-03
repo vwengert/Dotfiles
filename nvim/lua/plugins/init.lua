@@ -28,7 +28,7 @@ local default_plugins = {
       require("nvterm").setup({
         opts,
         terminals = {
-          shell = vim.o.shell,
+          shell = '/usr/bin/fish',
           list = {},
           type_opts = {
             float = {
