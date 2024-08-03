@@ -46,6 +46,13 @@ local plugins = {
     end,
   },
   {
+    "folke/persistence.nvim",
+    event = "BufReadPre",
+    opts = {
+      require("core.utils").load_mappings("persistence")
+    }
+  },
+  {
     "nvimtools/none-ls.nvim",
     event = "VeryLazy",
     opts = function()
@@ -67,6 +74,8 @@ local plugins = {
         "clangd",
         "clang-format",
         "cpptools",
+        "lua-language-server",
+        "vim-language-server",
       }
     }
   }

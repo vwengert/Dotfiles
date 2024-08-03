@@ -29,7 +29,6 @@ M.general = {
     -- save
     ["<C-s>"] = { "<cmd> wa <CR>", "Save all file" },
 
-    ["<leader>qq"] = { "<cmd> :qa <CR>", "Leave without check" },
     ["<leader>qs"] = { "<cmd> :wqa <CR>", "Leave after saving all" },
 
     -- Copy all
