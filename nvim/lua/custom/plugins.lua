@@ -46,13 +46,6 @@ local plugins = {
     end,
   },
   {
-    "folke/persistence.nvim",
-    event = "BufReadPre",
-    opts = {
-      require("core.utils").load_mappings("persistence")
-    }
-  },
-  {
     "rmagatti/auto-session",
     lazy = false,
     config = function()

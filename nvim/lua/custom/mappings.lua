@@ -96,23 +96,4 @@ M.auto_session = {
   }
 }
 
-M.persistence = {
-  plugin = true,
-  n = {
-    ["<leader>ql"] = {
-      function()
-        require("persistence").load({ last = true })
-      end,
-      "Load last session",
-    },
-    ["<leader>qq"] = {
-      function()
-        require("persistence").stop()
-        vim.api.nvim_command('qa')
-      end,
-      "Leave without saving and stop persistence"
-    }
-  }
-}
-
 return M
