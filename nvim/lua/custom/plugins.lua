@@ -53,6 +53,15 @@ local plugins = {
     }
   },
   {
+    "rmagatti/auto-session",
+    lazy = false,
+    config = function()
+      require('auto-session').setup({
+        auto_session_suppress_dirs={ '~/', '~/Downloads', '/'},
+      })
+    end,
+  },
+  {
     "nvimtools/none-ls.nvim",
     event = "VeryLazy",
     opts = function()
