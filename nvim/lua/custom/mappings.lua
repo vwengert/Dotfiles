@@ -84,6 +84,18 @@ M.git = {
   }
 }
 
+M.auto_session = {
+  plugin = true,
+  n = {
+    ["<leader>qf"] = {
+      function()
+        require("auto-session.session-lens").search_session()
+      end,
+      "Select session",
+    },
+  }
+}
+
 M.persistence = {
   plugin = true,
   n = {
@@ -92,12 +104,6 @@ M.persistence = {
         require("persistence").load({ last = true })
       end,
       "Load last session",
-    },
-    ["<leader>qf"] = {
-      function()
-        require("persistence").select()
-      end,
-      "Select session",
     },
     ["<leader>qq"] = {
       function()
