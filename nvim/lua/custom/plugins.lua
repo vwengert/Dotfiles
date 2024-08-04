@@ -62,6 +62,18 @@ local plugins = {
     end,
   },
   {
+    "danymat/neogen",
+    lazy = false,
+    config = function()
+      require("neogen").setup({
+        enabled = true,
+      })
+      require("core.utils").load_mappings("doxygen")
+    end,
+    -- Uncomment next line if you want to follow only stable versions
+    version = "*"
+  },
+  {
     "nvimtools/none-ls.nvim",
     event = "VeryLazy",
     opts = function()

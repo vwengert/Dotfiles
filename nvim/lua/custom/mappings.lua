@@ -96,4 +96,16 @@ M.auto_session = {
   }
 }
 
+M.doxygen = {
+  plugin = true,
+  n = {
+    ["<leader>cd"] = {
+      function()
+        require("neogen").generate()
+      end,
+      "add doxygen style comment",
+    },
+  }
+}
+
 return M
