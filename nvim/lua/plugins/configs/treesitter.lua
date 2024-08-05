@@ -1,7 +1,7 @@
 local options = {
   build = ":TSUpdate",
   event = { "BufReadPre", "BufNewFile"},
-  ensure_installed = { "lua",
+  ensure_installed = { "lua", "html",
     "cpp", "markdown", "markdown_inline",
     "bash", "java", "python" },
 

@@ -74,6 +74,14 @@ local plugins = {
     version = "*"
   },
   {
+    "OXY2DEV/markview.nvim",
+    lazy = false,
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter",
+      "nvim-tree/nvim-web-devicons"
+    }
+  },
+  {
     "nvimtools/none-ls.nvim",
     event = "VeryLazy",
     opts = function()
