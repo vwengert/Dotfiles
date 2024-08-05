@@ -31,9 +31,8 @@ bindsym $mod+Return exec terminator
 
 # start a browser
 bindsym $mod+g exec google-chrome-stable
-bindsym $mod+e exec dolphin
-bindsym $mod+i exec clion
-bindsym $mod+c exec qtcreator
+bindsym $mod+e exec nautilus
+bindsym $mod+c exec /opt/Qt/Tools/QtCreator/bin/qtcreator
 
 # kill focused window
 #bindsym $mod+Shift+q kill
@@ -56,7 +55,7 @@ bindsym $mod+d exec --no-startup-id rofi -show drun
 
 ################################################################################################
 ## sound-section - DO NOT EDIT if you wish to automatically upgrade Alsa -> Pulseaudio later! ##
-################################################################################################
+#o##############################################################################################
 
 exec --no-startup-id volumeicon
 #exec --no-startup-id pulseaudio
@@ -142,7 +141,7 @@ bindsym $mod+Ctrl+Left workspace prev
 # something like: set $ws1 1:mail
 #                 set $ws2 2:
 set $ws1 1:Terminal
-set $ws2 2:
+set $ws2 2:Internet
 set $ws3 3:Development
 set $ws4 4:Files
 set $ws5 5:Finances
@@ -194,10 +193,10 @@ bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 assign [class="Google-chrome"] $ws2
 assign [class="QtCreator"] $ws3
 assign [class="Terminator"]  $ws1
-assign [class="dolphin"]  $ws4
+assign [class="Nautilus"]  $ws4
 
 # Open specific applications in floating mode
-for_window [class="winterhalter-hmi"] floating enable border pixel 1
+for_window [class="winterhalter_hmi"] floating enable border pixel 1
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
