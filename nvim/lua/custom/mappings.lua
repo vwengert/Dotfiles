@@ -2,11 +2,26 @@ local M = {}
 
 M.cmake = {
   n = {
-    ["<leader>ma"] = {
+    ["<leader>mb"] = {
       function()
-        vim.api.nvim_command('horizontal term ./hmiBuild.sh -p mt')
+        vim.api.nvim_command('wa')
+        require("nvterm.terminal").send("./hmiBuild.sh -p mt", "horizontal")
       end,
-      "make mt debug",
+      "build mt debug",
+    },
+    ["<leader>mr"] = {
+      function()
+        vim.api.nvim_command('wa')
+        require("nvterm.terminal").send("./hmiBuild.sh -p mt -r y", "horizontal")
+      end,
+      "build and run mt debug",
+    },
+    ["<leader>md"] = {
+      function()
+        vim.api.nvim_command('wa')
+        require("nvterm.terminal").send("./hmiBuild.sh -p mt -r y -a device -i 10.202.20.102", "horizontal")
+      end,
+      "build and deplodeploy mt debug",
     },
   },
 }
