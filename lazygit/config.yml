@@ -1,0 +1,11 @@
+git:
+  paging:
+    colorArg: always
+    pager: delta --dark --paging=never
+
+gui:
+  branchColors:
+    'master': red
+
+  authorColors:
+    'Volker Wengert': green
