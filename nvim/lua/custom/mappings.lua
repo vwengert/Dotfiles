@@ -8,11 +8,11 @@ M.cmake = {
       "Clean CMake Project",
     },
     ["<leader>mg"] = {
-      "<cmd> CMakeGenerate -G Ninja -DCMAKE_EXPORT_COMPILE_COMMANDS=1 <CR>",
+      "<cmd>wa<CR><cmd> CMakeGenerate -G Ninja -DCMAKE_EXPORT_COMPILE_COMMANDS=1 <CR>",
       "Generate CMake Project",
     },
     ["<leader>mb"] = {
-      "<cmd> CMakeBuild <CR>",
+      "<cmd>wa<CR><cmd> CMakeBuild <CR>",
       "Build CMake Project",
     },
     ["<leader>mt"] = {
