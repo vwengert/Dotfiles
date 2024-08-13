@@ -18,6 +18,20 @@ local plugins = {
     end,
   },
   {
+    "rcarriga/nvim-dap-ui",
+    event = "VeryLazy",
+    dependencies = {
+      "mfussenegger/nvim-dap",
+      "nvim-neotest/nvim-nio",
+    },
+    opts = function()
+      return require "custom.configs.dap"
+    end,
+    config = function()
+      require("core.utils").load_mappings("debug")
+    end,
+  },
+  {
     "machakann/vim-highlightedyank",
     lazy = false,
   },

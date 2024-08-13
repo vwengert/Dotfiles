@@ -26,6 +26,18 @@ M.cmake = {
   },
 }
 
+M.debug = {
+  plugin = true,
+  n = {
+    ["<leader>db"] = {
+      function()
+        require('dap').toggle_breakpoints()          
+      end,
+      "toggle breakpoint",
+    },
+  },
+}
+
 M.coding = {
   plugin = true,
   n = {
@@ -42,14 +54,6 @@ M.coding = {
         vim.api.nvim_command('vertical term cppman <cword>')
       end,
       "Help from cppman",
-    },
-    ["<leader>db"] = {
-      function()
-        vim.api.nvim_command('redir >> .breakpints')
-        vim.api.nvim_command('echo "break" join([expand("%"), line(".")], ":")')
-        vim.api.nvim_command('redir END')
-      end,
-      "set breakpoint in .breakpoints",
     },
   }
 }
