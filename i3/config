@@ -204,6 +204,7 @@ assign [class="Nautilus"]  $ws4
 
 # Open specific applications in floating mode
 for_window [class="winterhalter_hmi"] floating enable border pixel 1
+for_window [class="Gnome-calculator"] floating enable border pixel 1
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
