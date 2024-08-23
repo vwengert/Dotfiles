@@ -156,14 +156,14 @@ set $ws7 7
 set $ws8 8
 
 # use workspace on display
-# workspace $ws1 output HDMI-0
-# workspace $ws2 output DP-0
-# workspace $ws3 output DP-0
-# workspace $ws4 output DP-0
-# workspace $ws5 output DP-0
-# workspace $ws6 output DP-0
-# workspace $ws7 output HDMI-0
-# workspace $ws8 output HDMI-0
+workspace $ws1 output Virtual2
+workspace $ws2 output Virtual2
+workspace $ws3 output Virtual1
+workspace $ws4 output Virtual1
+workspace $ws5 output Virtual1
+workspace $ws6 output Virtual1
+workspace $ws7 output Virtual1
+workspace $ws8 output Virtual2
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
