@@ -19,7 +19,7 @@ M.cmake = {
     ["<leader>md"] = {
       function()
         vim.api.nvim_command('wa')
-        require("nvterm.terminal").send("./hmiBuild.sh -p mt -r y -a device -i 10.202.20.102", "horizontal")
+        require("nvterm.terminal").send("./hmiBuild.sh -p mt -r y -a device -i 10.202.20.176", "horizontal")
       end,
       "build and deplodeploy mt debug",
     },
