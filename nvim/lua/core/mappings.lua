@@ -157,6 +157,13 @@ M.lspconfig = {
       "LSP hover",
     },
 
+    ["L"] = {
+      function()
+        vim.diagnostic.open_float()
+      end,
+      "LSP hover",
+    },
+
     ["gi"] = {
       function()
         vim.lsp.buf.implementation()

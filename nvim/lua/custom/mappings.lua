@@ -49,7 +49,7 @@ M.coding = {
     },
     ["<leader>db"] = {
       function()
-        vim.api.nvim_command('redir >> .breakpints')
+        vim.api.nvim_command('redir >> .breakpoints')
         vim.api.nvim_command('echo "break" join([expand("%"), line(".")], ":")')
         vim.api.nvim_command('redir END')
       end,
