@@ -1,7 +1,5 @@
-local base = require("plugins.configs.lspconfig")
-local on_attach = base.on_attach
-local capabilities = base.capabilities
-
+local on_attach = require("plugins.configs.lspconfig").on_attach
+local capabilities = require("plugins.configs.lspconfig").capabilities
 local lspconfig = require("lspconfig")
 
 lspconfig.clangd.setup {
@@ -11,3 +9,4 @@ lspconfig.clangd.setup {
   end,
   capabilities = capabilities,
 }
+
