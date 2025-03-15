@@ -34,7 +34,6 @@ local plugins = {
       }
     end
   },
-
   {
     'rust-lang/rust.vim',
     ft = "rust",
@@ -42,7 +41,6 @@ local plugins = {
       vim.g.rustfmt_autosave = 1
     end
   },
-
   {
     'mfussenegger/nvim-dap',
     config = function()
@@ -61,15 +59,24 @@ local plugins = {
       end
 		end,
   },
-
   {
-    'rcarriga/nvim-dap-ui', 
+    "jay-babu/mason-nvim-dap.nvim",
+    event = "VeryLazy",
+    dependencies = {
+      "williamboman/mason.nvim",
+      "mfussenegger/nvim-dap",
+    },
+    opts = {
+      handlers = {}
+    }
+  },
+  {
+    'rcarriga/nvim-dap-ui',
     dependencies = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"},
     config = function()
 			require("dapui").setup()
 		end,
   },
-
   {
     'saecki/crates.nvim',
     ft = {"toml"},
@@ -167,7 +174,6 @@ local plugins = {
         "codelldb",
         "clangd",
         "clang-format",
-        "cpptools",
         "lua-language-server",
         "vim-language-server",
         "rust-analyzer",
