@@ -47,15 +47,45 @@ M.coding = {
       end,
       "Help from cppman",
     },
-    ["<leader>db"] = {
-      function()
-        vim.api.nvim_command('redir >> .breakpoints')
-        vim.api.nvim_command('echo "break" join([expand("%"), line(".")], ":")')
-        vim.api.nvim_command('redir END')
-      end,
-      "set breakpoint in .breakpoints",
+
+    -- Nvim DAP
+    ["<Leader>dl"] = {
+      "<cmd>lua require'dap'.step_into()<CR>",
+      "Debugger step into",
     },
-  }
+    ["<Leader>dt"] = {
+      "<cmd>lua vim.cmd('RustLsp testables')<CR>",
+      "Debugger testables"
+    },
+    ["<Leader>dj"] = {
+      "<cmd>lua require'dap'.step_over()<CR>",
+      "Debugger step over"
+    },
+    ["<Leader>dk"] = {
+      "<cmd>lua require'dap'.step_out()<CR>",
+      "Debugger step out"
+    },
+    ["<Leader>dc"] = {
+      "<cmd>lua require'dap'.continue()<CR>",
+      "Debugger continue"
+    },
+    ["<Leader>db"] = {
+      "<cmd>lua require'dap'.toggle_breakpoint()<CR>",
+      "Debugger toggle breakpoint"
+    },
+    ["<Leader>dd"] = {
+      "<cmd>lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>",
+      "Debugger set conditional breakpoint"
+    },
+    ["<Leader>de"] = {
+      "<cmd>lua require'dap'.terminate()<CR>",
+      "Debugger reset"
+    },
+    ["<Leader>dr"] = {
+      "<cmd>lua require'dap'.run_last()<CR>",
+      "Debugger run last"
+    },
+  },
 }
 
 M.git = {
