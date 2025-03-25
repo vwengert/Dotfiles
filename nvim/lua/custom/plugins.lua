@@ -172,10 +172,6 @@ local plugins = {
     opts = {
       ensure_installed = {
         "codelldb",
-        "clangd",
-        "clang-format",
-        "lua-language-server",
-        "vim-language-server",
         "rust-analyzer",
       }
     }
