@@ -27,13 +27,15 @@ font xft:URWGothic-Book 11
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec terminator
+bindsym $mod+Return exec kitty
 
 # start a browser
-bindsym $mod+g exec google-chrome-stable
+# bindsym $mod+g exec google-chrome-stable
+bindsym $mod+g exec firefox
 bindsym $mod+e exec dolphin
-bindsym $mod+i exec clion
-bindsym $mod+c exec qtcreator
+bindsym $mod+c exec spotify-launcher
+# bindsym $mod+i exec clion
+# bindsym $mod+c exec qtcreator
 
 # kill focused window
 #bindsym $mod+Shift+q kill
@@ -147,20 +149,10 @@ set $ws1 1:Terminal
 set $ws2 2:
 set $ws3 3:Development
 set $ws4 4:Files
-set $ws5 5:Finances
+set $ws5 5:Spotify
 set $ws6 6:Games
 set $ws7 7
 set $ws8 8:Steam
-
-# use workspace on display
-# workspace $ws1 output HDMI-0
-# workspace $ws2 output DP-0
-# workspace $ws3 output DP-0
-# workspace $ws4 output DP-0
-# workspace $ws5 output DP-0
-# workspace $ws6 output DP-0
-# workspace $ws7 output HDMI-0
-# workspace $ws8 output HDMI-0
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -171,6 +163,10 @@ bindsym $mod+5 workspace $ws5
 bindsym $mod+6 workspace $ws6
 bindsym $mod+7 workspace $ws7
 bindsym $mod+8 workspace $ws8
+
+# move workspace to different window
+bindsym $mod+Ctrl+Shift+Right move workspace to output right
+bindsym $mod+Ctrl+Shift+Left move workspace to output left
 
 # Move focused container to workspace
 bindsym $mod+Ctrl+1 move container to workspace $ws1
@@ -194,14 +190,13 @@ bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 
 # Open applications on specific workspaces
 assign [class="Google-chrome"] $ws2
+assign [class="firefox"] $ws2
+assign [class="Spotify"] $ws5
 assign [class="QtCreator"] $ws3
 assign [class="jetbrains-clion"] $ws3
-assign [class="Terminator"]  $ws1
-assign [class="dolphin"]  $ws4
+assign [class="kitty"] $ws1
+assign [class="dolphin"] $ws4
 
-# Open specific applications in floating mode
-for_window [class="LearnOpenGL"] floating enable border pixel 1
-for_window [class="ModernCPP"] floating enable border pixel 1
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
@@ -258,6 +253,7 @@ mode "resize" {
 }
 
 exec_always --no-startup-id setxkbmap -option caps:escape
+exec --no-startup-id ./screen_orientation.sh
 
 # Color palette used for the terminal ( ~/.Xresources file )
 # Colors are gathered based on the documentation:
