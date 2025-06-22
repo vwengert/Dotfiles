@@ -13,3 +13,10 @@ vim.api.nvim_create_autocmd({ "BufEnter", "InsertLeave" }, {
     vim.lsp.codelens.refresh()
   end,
 })
+
+vim.api.nvim_create_autocmd({ "FileType" }, {
+  pattern = { "cmake" },
+  callback = function()
+    vim.b.autoformat = false
+  end,
+})
