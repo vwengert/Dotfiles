@@ -3,3 +3,4 @@
 -- Add any additional keymaps here
 
 vim.api.nvim_set_keymap("i", "jk", "<ESC>", { noremap = false })
+vim.api.nvim_set_keymap("n", "<F4>", "<cmd>ClangdSwitchSourceHeader<cr>", { noremap = false })

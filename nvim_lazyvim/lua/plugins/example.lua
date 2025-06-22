@@ -127,6 +127,8 @@ return {
         "lua",
         "markdown",
         "markdown_inline",
+        "cpp",
+        "cmake",
         "python",
         "query",
         "regex",
@@ -187,6 +189,10 @@ return {
     "williamboman/mason.nvim",
     opts = {
       ensure_installed = {
+        "clangd",
+        "clang-format",
+        "cmakelang",
+        "cmakelint",
         "stylua",
         "shellcheck",
         "shfmt",
